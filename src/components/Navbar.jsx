@@ -43,14 +43,25 @@ export default function Navbar() {
           </Link>
         </li>
         <li>
-        <Link
+          <Link
             to="projects"
             spy={true}
             smooth={"easeInOutQuart"}
             duration={2000}
-          >Projects
-          </Link></li>
-        <li>Contact</li>
+          >
+            Projects
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="contact"
+            spy={true}
+            smooth={"easeInOutQuart"}
+            duration={2000}
+          >
+            Contact
+          </Link>
+        </li>
       </ul>
     </main>
   );
