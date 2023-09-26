@@ -55,12 +55,12 @@ export default function Title() {
             text-8xl
         "
       >
-        <h1 id="title1" className="-ml-5">
+        <h1 id="title1" className="-ml-5 font-Play">
           Dani
         </h1>
         <h1 
             id="title2"
-            className="ml-12">Pérez</h1>
+            className="ml-12 font-Play" >Pérez</h1>
       </div>
     </main>
   );

@@ -8,7 +8,6 @@ export default function Links() {
             text-[1.2rem]
              w-[90%]
                     flex
-                    mb-32
                     items-center
                     justify-between
                     z-10

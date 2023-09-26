@@ -13,7 +13,7 @@ export default function Projects() {
         '
     >
         <h2
-            className='text-2xl'
+            className='text-5xl'
         >Projects</h2>
 
 

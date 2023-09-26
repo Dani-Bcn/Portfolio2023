@@ -48,9 +48,9 @@ export default function NavResponsive() {
             flex
             items-center
             justify-center
-            bg-blue-300
+            bg-indigo-300
             rounded-[100px]
-            text-slate-800              
+            text-slate-50              
             "
         >
           Contact
@@ -64,9 +64,9 @@ export default function NavResponsive() {
             flex
             items-center
             justify-center
-            bg-blue-300
+            bg-indigo-300
             rounded-[100px]
-            text-slate-800               
+            text-slate-50               
             "
         >
           Menu
@@ -84,6 +84,7 @@ export default function NavResponsive() {
             justify-around
             items-center
             bg-red-300
+            text-slate-50
             ml-[1500px]
             "
       >

@@ -15,7 +15,7 @@ export default function Skills() {
     >
       <h2
         className="
-          text-4xl
+          text-5xl
         "
       >Skills</h2>
     </main>
