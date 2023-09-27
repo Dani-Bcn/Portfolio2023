@@ -9,14 +9,14 @@ export default function NavResponsive() {
       ? gsap.to("#menu", {
           marginTop: 0,
           ease: "expo.out",
-          clipPath:"circle( 70.7% at 50% 50%)",
-          duration:1
+          clipPath: "circle( 70.7% at 50% 50%)",
+          duration: 1,
         })
       : gsap.to("#menu", {
           marginTop: 750,
           ease: "expo.in",
-          clipPath:"circle( 25.7% at 50% 50%)",
-          duration:1
+          clipPath: "circle( 25.7% at 50% 50%)",
+          duration: 1,
         });
   }, [menuActive]);
 
@@ -56,8 +56,18 @@ export default function NavResponsive() {
             rounded-[100px]
             text-slate-50              
             "
+          onClick={() => setMenuActive(!menuActive)}
         >
-          Contact
+          {" "}
+          <Link
+            to="contact"
+            spy={true}
+            smooth={"easeInOutQuart"}
+            duration={2000}
+            onClick={() => setMenuActive(false)}
+          >
+            Contact
+          </Link>
         </div>
         <div
           onClick={() => setMenuActive(!menuActive)}
