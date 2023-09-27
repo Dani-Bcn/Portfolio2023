@@ -32,7 +32,7 @@ export default function Title() {
       className="
             w-full
             h-screen
-            bg-slate-500
+            bg-slate-800
             flex
             justify-center
             items-center
@@ -44,7 +44,7 @@ export default function Title() {
             w-96
             md:w-72
             md:h-72
-            bg-red-300
+            bg-indigo-300
             rounded-[500px]
             cursor-pointer
         "
@@ -55,12 +55,22 @@ export default function Title() {
             text-8xl
         "
       >
-        <h1 id="title1" className="-ml-5 font-Play">
+        <h1 id="title1" 
+        className="
+        font-Play
+        text-orange-200
+        "
+
+        >
           Dani
         </h1>
         <h1 
             id="title2"
-            className="ml-12 font-Play" >Pérez</h1>
+            className="
+            ml-12 
+            font-Play
+            text-orange-200
+            " >Pérez</h1>
       </div>
     </main>
   );
