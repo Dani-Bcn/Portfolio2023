@@ -5,28 +5,35 @@ export default function Links() {
     <main
       className="
            text-white
-            text-[1.2rem]
+            text-xl
              w-[90%]
+             h-10
+             md:h-1
                     flex
                     items-center
-                    justify-between
+                    justify-around
                     z-10
                 "
     >
       <a
         href="https://www.linkedin.com/in/daniperezbnc/"
         target="_blank"
-        rel="noopener noreferrer"
       >
         <button
           className="
               w-28
-              h-16
+              h-full
+             
+              flex
+              text-center
+              justify-center
+              items-center
               rounded-[40px]
               bg-indigo-300
+              p-3
           "
         >
-          Linkedin
+          <h3>Linkedin</h3>
         </button>
       </a>
       <a
@@ -36,9 +43,10 @@ export default function Links() {
         <button
           className="
               w-28
-              h-16
+              h-full
               rounded-[40px]
               bg-indigo-300
+              p-3
           "
         >
           Domestika
@@ -48,9 +56,10 @@ export default function Links() {
         <button
           className="
               w-28
-              h-16
+              h-full
               rounded-[40px]
               bg-indigo-300
+              p-3
           "
         >
           GitHub

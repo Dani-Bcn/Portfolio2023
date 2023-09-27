@@ -7,12 +7,16 @@ export default function NavResponsive() {
   useEffect(() => {
     menuActive
       ? gsap.to("#menu", {
-          marginLeft: 0,
+          marginTop: 0,
           ease: "expo.out",
+          clipPath:"circle( 70.7% at 50% 50%)",
+          duration:1
         })
       : gsap.to("#menu", {
-          marginLeft: 1500,
+          marginTop: 750,
           ease: "expo.in",
+          clipPath:"circle( 10.7% at 50% 50%)",
+          duration:1
         });
   }, [menuActive]);
 
@@ -25,7 +29,7 @@ export default function NavResponsive() {
         h-screen
         items-center
         justify-center
-        z-10
+        z-10       
         "
     >
       <div
@@ -86,6 +90,7 @@ export default function NavResponsive() {
             bg-red-300
             text-slate-50
             ml-[1500px]
+            clip-circle-25
             "
       >
         <li>

@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .clip-circle-0 { 
+      clip-path: circle(0% at 50% 50%); 
+  }
+  .clip-circle-25 { 
+      clip-path: circle(25% at 50% 50%); 
+  }
+  .clip-circle-70 { 
+      clip-path: circle(70% at 50% 50%); 
+  }
+  .clip-parallel-0 { 
+      clip-path: polygon(0 0, 100% 0%, 4% 6%, 0 99%);
+  }
+}
+
 *{
   margin: 0;
   padding: 0;

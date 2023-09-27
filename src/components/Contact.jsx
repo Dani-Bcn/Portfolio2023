@@ -15,13 +15,14 @@ export default function Contact() {
             bg-slate-800
             text-slate-50
             text-4xl
+            md:text-2xl
         "
     >
       <h2>Contact</h2>
       <a href="mailto:nneodani@gmail.com">
         <h3
           className="
-                    text-[2rem]
+                   
                     w-full
                     text-white
                     h-12
