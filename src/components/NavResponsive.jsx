@@ -15,7 +15,7 @@ export default function NavResponsive() {
       : gsap.to("#menu", {
           marginTop: 750,
           ease: "expo.in",
-          clipPath:"circle( 10.7% at 50% 50%)",
+          clipPath:"circle( 25.7% at 50% 50%)",
           duration:1
         });
   }, [menuActive]);
@@ -89,7 +89,7 @@ export default function NavResponsive() {
             items-center
             bg-red-300
             text-slate-50
-            ml-[1500px]
+         
             clip-circle-25
             "
       >
