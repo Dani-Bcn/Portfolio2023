@@ -19,50 +19,22 @@ export default function Links() {
         href="https://www.linkedin.com/in/daniperezbnc/"
         target="_blank"
       >
-        <button
-          className="
-              w-24
-              h-full
-             
-              flex
-              text-center
-              justify-center
-              items-center
-              rounded-[40px]
-              bg-indigo-300
-              p-3
-          "
-        >
-          <h3>Linkedin</h3>
+        
+        <button id="buttonLinks">       
+          Linkedin
         </button>
       </a>
       <a
         href="https://www.domestika.org/es/nneodani/portfolio"
         target="_blank"
       >
-        <button
-          className="
-              w-28
-              h-full
-              rounded-[40px]
-              bg-indigo-300
-              p-3
-          "
-        >
+        <button id="buttonLinks">       
           Domestika
         </button>
       </a>
       <a href="https://github.com/Dani-Bcn"  target="_blank">
-        <button
-          className="
-              w-24
-              h-full
-              rounded-[40px]
-              bg-indigo-300
-              p-3
-          "
-        >
-          GitHub
+      <button id="buttonLinks">       
+          Github
         </button>
       </a>
     </main>

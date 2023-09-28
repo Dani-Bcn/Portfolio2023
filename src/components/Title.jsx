@@ -38,7 +38,7 @@ useEffect(()=>{
           end: 5000,
           scrub: 2,
         },
-        scale:20,
+        scale:30,
         y:2500,
         backgroundColor: "rgb(100 6 8)",
       });
@@ -60,8 +60,8 @@ useEffect(()=>{
         className="
             h-96
             w-96
-            md:w-72
-            md:h-72
+            md:w-96
+            md:h-96
             bg-indigo-400
             rounded-[500px]
             cursor-pointer
@@ -70,8 +70,7 @@ useEffect(()=>{
       ></div>
       <div
         className="
-            absolute
-            text-8xl
+            absolute           
         "
       >
         <h1
@@ -79,6 +78,8 @@ useEffect(()=>{
           className="
         font-Play
         text-orange-200
+        text-8xl
+        md:text-9xl
         opacity-1
         "
         >
@@ -91,6 +92,8 @@ useEffect(()=>{
             font-Play
             text-orange-200
             opacity-1
+            md:text-9xl
+            text-8xl
             "
         >
           Pérez

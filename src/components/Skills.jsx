@@ -39,9 +39,8 @@ export default function Skills() {
   const tl = gsap.timeline();
 
   useEffect(() => {
-    var skillsFront = document.querySelectorAll("#skillsFront");
 
-   
+    var skillsFront = document.querySelectorAll("#skillsFront");   
 
     tl.set(skillsFront, {
       color: "rgb(50,250,250)",
@@ -51,7 +50,6 @@ export default function Skills() {
     });   
 
     for (let x = 0; x < wordsFrontEnd.length; x++) {
-
      
       tl.to(skillsFront[x], {
         scrollTrigger: {
@@ -61,9 +59,7 @@ export default function Skills() {
           scrub: 2,
         },
         color: "white",
-        opacity: 1,
-       
-      
+        opacity: 1,      
       });
     }
   });
@@ -89,7 +85,7 @@ export default function Skills() {
         <span>
         <h2
         className="
-          text-4xl
+          text-5xl
           text-orange-200
         "
       >Skills</h2>
@@ -104,6 +100,7 @@ export default function Skills() {
         <section
           className="
             mt-10
+            md:ml-10
             w-screen 
             md:w-[80%]
             z-10    
@@ -121,11 +118,14 @@ export default function Skills() {
                     justify-around
                     h-24
                     w-24
-                    text-[20px]
+                    text-[18px]
                     my-2
                     mx-4
-                    bg-indigo-300
-                   
+                    text-indigo-800
+                    border-orange-200
+                    border-solid
+                    border-2
+                    rounded-xl
                     z-10
                   `}
               >

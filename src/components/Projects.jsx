@@ -23,7 +23,6 @@ export default function Projects() {
       >
         Projects
       </h2>
-
       <h3
         className="
         text-orange-200
@@ -37,11 +36,10 @@ export default function Projects() {
           src={images[0]}
           alt="img-poke"
           width={600}
-          className="
-            
-              my-5
-                   clip-circle-25
-                "
+          className="            
+            my-5
+            clip-circle-25
+            "
         />
       </a>
       <h3
@@ -52,17 +50,15 @@ export default function Projects() {
       >
         App movies
       </h3>
-
       <a href="https://apiappmovies.netlify.app/" target="_blank">
         <img
           src={images[1]}
           alt="img-poke"
           width={600}
           className="
-            my-5
-               
-                   clip-circle-25
-                "
+            my-5               
+            clip-circle-25
+            "
         />
       </a>
       <h3
@@ -79,7 +75,7 @@ export default function Projects() {
         width={600}
         className="
                 my-5
-                   clip-circle-25
+                clip-circle-25
                 "
       />
       <div
@@ -89,7 +85,6 @@ export default function Projects() {
             flex
             items-center
             justify-around
-
             "
       >
         <a
@@ -110,8 +105,8 @@ export default function Projects() {
         >
           <p
             className="
-           cursor-pointer
-       "
+                cursor-pointer
+            "
           >
             front-end
           </p>

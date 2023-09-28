@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import images from "./Images";
 
 export default function About() {
   let lettersString =
-    "An LA-based , award-winning design ,director and UI/UX ,design ,expert with 10 years ,of experience in ,design and ,management.";
+    "Passionate about programming and graphic design, I understood that my professional life had to change. I decided to leave my job after six years at my six years in it, to start a programming bootcamp and try to dedicate myself programming and try to dedicate myself to it professionally";
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -12,7 +13,20 @@ export default function About() {
 
     const leters = document.querySelectorAll("#lettersArray");
 
-
+    useEffect(()=>{
+      gsap.to("#photo",{
+        scrollTrigger:{
+          trigger:"#photo",
+          start:"center center",
+          end:1000,
+          scrub:2
+        },
+        x:1500,
+        opacity:0.7,
+        scale:1,
+        clipPath: "circle(28% at 50% 25%)",
+      })
+    })
 
   return (
     <main
@@ -43,7 +57,7 @@ export default function About() {
       <h2
         className="
           pt-24
-          text-4xl
+          text-5xl
           text-orange-200
         "
       >About</h2>
@@ -62,8 +76,23 @@ export default function About() {
           text-orange-200
           text-2xl
         "
-      >Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam dolorem ea assumenda exercitationem perspiciatis temporibus amet dolor nihil fugit, soluta laudantium in voluptate? In, debitis odit assumenda saepe totam quisquam.</p>
+      >{lettersString}</p>
     </span>
+    <img 
+    src={images[3]} 
+    alt="img-photo" 
+    width={700}
+    id="photo"
+    className="
+      -ml-96
+      md:-mt-32
+      md:-ml-[1900px]
+      sm:mt-80
+      absolute
+      opacity-0
+      clip-circle-photo
+    "
+    />
     </main>
   );
 }
