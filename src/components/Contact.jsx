@@ -13,7 +13,6 @@ export default function Contact() {
        
             justify-around
             items-center
-            bg-slate-700
             text-slate-50
             text-4xl
             md:text-2xl

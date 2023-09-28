@@ -38,8 +38,8 @@ useEffect(()=>{
           end: 5000,
           scrub: 2,
         },
-        scale:15,
-        y:2000,
+        scale:20,
+        y:2500,
         backgroundColor: "rgb(100 6 8)",
       });
   })
