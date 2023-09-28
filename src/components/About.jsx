@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-  
-  import images from "./Images";
+
+import images from "./Images";
 
 export default function About() {
   let lettersString =
@@ -10,24 +10,42 @@ export default function About() {
 
   gsap.registerPlugin(ScrollTrigger);
 
-  let lettersArray = lettersString.split(" ,"); 
+  let lettersArray = lettersString.split(" ,");
 
-    const leters = document.querySelectorAll("#lettersArray");
+  const leters = document.querySelectorAll("#lettersArray");
 
-    useEffect(()=>{
-      gsap.to("#photo",{
-        scrollTrigger:{
-          trigger:"#photo",
-          start:"center center",
-        
-          scrub:2
+  let mm = gsap.matchMedia();
+
+  useEffect(() => {
+    mm.add("(max-width:400px)", () => {
+      gsap.to("#photo", {
+        scrollTrigger: {
+          trigger: "#photo",
+          start: "center 1000",
+          end: 1500,
+          scrub: 2,
         },
-        x:1500,
-        opacity:0.7,
-        scale:1,
+        x: 520,
+        opacity: 1,
+        scale: 1,
         clipPath: "circle(28% at 50% 25%)",
-      })
-    })
+      });
+    });
+    mm.add("(min-width:400px)", () => {
+      gsap.to("#photo", {
+        scrollTrigger: {
+          trigger: "#photo",
+          start: "center center",
+          end: 1000,
+          scrub: 2,
+        },
+        x: 2000,
+        opacity: 0.8,
+        scale: 1,
+        clipPath: "circle(28% at 50% 25%)",
+      });
+    });
+  });
 
   return (
     <main
@@ -44,7 +62,7 @@ export default function About() {
       justify-around
       md:justify-start
       z-10
-      "     
+      "
     >
       <span
         className="
@@ -55,36 +73,40 @@ export default function About() {
           justify-centen
         "
       >
-      <h2
-        className="
+        <h2
+          className="
           pt-24
           text-5xl
           text-orange-200
         "
-      >About</h2>
-      <div
-        className="
+        >
+          About
+        </h2>
+        <div
+          className="
           w-32
           h-0.5
           bg-orange-200
         "
-      ></div>
+        ></div>
 
-      <p
-        className="
+        <p
+          className="
           w-4/5
           mt-10
           text-orange-200
           text-2xl
         "
-      >{lettersString}</p>
-    </span>
-    <img 
-    src={images[3]} 
-    alt="img-photo" 
-    width={700}
-    id="photo"
-    className="
+        >
+          {lettersString}
+        </p>
+      </span>
+      <img
+        src={images[3]}
+        alt="img-photo"
+        width={700}
+        id="photo"
+        className="
       -ml-96
       md:-mt-32
       md:-ml-[1900px]
@@ -93,7 +115,7 @@ export default function About() {
       opacity-0
       clip-circle-photo
     "
-    />
+      />
     </main>
   );
 }
