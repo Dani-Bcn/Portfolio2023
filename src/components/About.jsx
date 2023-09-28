@@ -19,7 +19,7 @@ export default function About() {
         scrollTrigger:{
           trigger:"#photo",
           start:"center center",
-          end:1000,
+        
           scrub:2
         },
         x:1500,
