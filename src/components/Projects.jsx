@@ -1,7 +1,53 @@
-import React from "react";
+import React, { useEffect } from "react";
 import images from "./Images";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function Projects() {
+
+  const imagesPojects = [
+    {
+      link: "https://pokeahorcado.netlify.app/",
+      img: images[0],
+      title:"Poke ahorcado"
+    },
+    {
+      link: "https://apiappmovies.netlify.app/",
+      img: images[1],
+      title:"App movies"
+    },
+    {
+      link: "https://apiappmovies.netlify.app/",
+      img: images[1],
+      title:"Homeworks for kids"
+    },
+  ];
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  useEffect(() => {
+    const tl = gsap.timeline();
+
+    const imagesComp = document.querySelectorAll("#imagesComp");
+
+    tl.set(imagesComp, {
+      clipPath: "circle(0.1% at 50% 50%)",
+      delay: 5,
+    });
+
+    for (let x = 0; x < imagesPojects.length; x++) {
+      tl.to(imagesComp[x], {
+        scrollTrigger: {
+          trigger: imagesComp[x],
+          start: "center center",
+          end: 50,
+          scrub: 2,
+        },
+        clipPath: "circle(20% at 50% 50%)",
+      });
+    }
+  },);
+
   return (
     <main
       id="projects"
@@ -23,61 +69,35 @@ export default function Projects() {
       >
         Projects
       </h2>
-      <h3
-        className="
-        text-orange-200
-        text-2xl
-        "
-      >
-        Poke Ahorcado
-      </h3>
-      <a href="https://pokeahorcado.netlify.app/" target="_blank">
-        <img
-          src={images[0]}
-          alt="img-poke"
-          width={600}
-          className="            
-            my-5
-            clip-circle-25
-            "
-        />
-      </a>
-      <h3
-        className="
-        text-orange-200
-        text-2xl
-        "
-      >
-        App movies
-      </h3>
-      <a href="https://apiappmovies.netlify.app/" target="_blank">
-        <img
-          src={images[1]}
-          alt="img-poke"
-          width={600}
-          className="
-            my-5               
-            clip-circle-25
-            "
-        />
-      </a>
-      <h3
-        className="
-        text-orange-200
-        text-2xl
-        "
-      >
-        Homeworks for kids
-      </h3>
-      <img
-        src={images[2]}
-        alt="img-poke"
-        width={600}
-        className="
-                my-5
-                clip-circle-25
+     
+      {imagesPojects.map((e, i) => {
+        return (
+          <a key={i} href={imagesPojects[i].link}>
+            <h3
+                className="
+                    my-1
+                    flex
+                    items-center
+                    justify-center
+                    text-3xl
+                    text-orange-200
                 "
-      />
+            >{imagesPojects[i].title}</h3>
+            <img            
+                id="imagesComp"
+                className="
+                w-screen
+                clip-circle-0
+                flex
+                items-center
+                justify-center
+            "
+                src={imagesPojects[i].img}
+                alt="imgAll"
+            />
+          </a>
+        );
+      })}
       <div
         className="
             w-screen

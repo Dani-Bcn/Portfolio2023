@@ -10,34 +10,46 @@ export default function Navbar() {
          w-20
          h-screen
          items-center
-         mx-5
+         justify-center
          z-20
         "
     >
       <ul
         className="
-                w-full
-                h-screen
-                flex
-                flex-col
-                justify-around
-                items-center    
-                text-orange-200            
-            "
+          w-full
+          h-screen
+          flex
+          flex-col
+          justify-center
+          items-start    
+          text-orange-200            
+        "
       >
         <li>
-          <Link to="home"  id="buttonLinks" spy={true} smooth={"easeInOutQuart"} duration={2000}>
+          <Link
+            to="home"
+            id="buttonLinks"
+            spy={true}
+            smooth={"easeInOutQuart"}
+            duration={2000}
+          >
             Start
           </Link>
         </li>
         <li>
-          <Link to="about"   id="buttonLinks"spy={true} smooth={"easeInOutQuart"} duration={2000}>
+          <Link
+            to="about"
+            id="buttonLinks"
+            spy={true}
+            smooth={"easeInOutQuart"}
+            duration={2000}
+          >
             About me
           </Link>
         </li>
         <li>
           <Link
-           id="buttonLinks"
+            id="buttonLinks"
             to="skills"
             spy={true}
             offset={-50}
@@ -49,7 +61,7 @@ export default function Navbar() {
         </li>
         <li>
           <Link
-           id="buttonLinks"
+            id="buttonLinks"
             to="projects"
             spy={true}
             smooth={"easeInOutQuart"}
@@ -60,7 +72,7 @@ export default function Navbar() {
         </li>
         <li>
           <Link
-           id="buttonLinks"
+            id="buttonLinks"
             to="contact"
             spy={true}
             smooth={"easeInOutQuart"}

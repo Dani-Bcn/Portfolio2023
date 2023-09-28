@@ -7,10 +7,10 @@
       clip-path: circle(0% at 50% 50%); 
   }
   .clip-circle-25 { 
-      clip-path: circle(28% at 50% 50%); 
+      clip-path: circle(20% at 50% 50%); 
   }
   .clip-circle-photo { 
-    clip-path: circle(28% at 5% 50%); 
+    clip-path: circle(28% at 25% 75%); 
 }
 .clip-circle-photo2 { 
   clip-path: circle(28% at 50% 50%); 
@@ -44,7 +44,8 @@ li{
 #buttonLinks {
   position: relative;
   display: inline-block;
-  margin: 20px;
+  margin: 15px;
+  width: 100px;
   padding: 10px 10px;
   text-align: center;
   font-size: 15px;

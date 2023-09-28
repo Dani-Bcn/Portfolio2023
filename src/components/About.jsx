@@ -107,14 +107,14 @@ export default function About() {
         width={700}
         id="photo"
         className="
-      -ml-96
-      md:-mt-32
-      md:-ml-[1900px]
-      sm:mt-80
-      absolute
-      opacity-0
-      clip-circle-photo
-    "
+          -ml-96
+          md:-mt-32
+          md:-ml-[1900px]
+          sm:mt-80
+          absolute
+          opacity-0
+          clip-circle-photo
+        "
       />
     </main>
   );

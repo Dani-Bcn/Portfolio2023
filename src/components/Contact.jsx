@@ -24,13 +24,13 @@ export default function Contact() {
     >Contact</h2>
       <section
         className="
-        flex
-        flex-col
-        justify-around
-        items-center
+          flex
+          flex-col
+          justify-around
+          items-center
           w-10/12
           h-1/2
-                  "
+        "
       >
        
         <a href="mailto:nneodani@gmail.com">

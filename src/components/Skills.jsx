@@ -54,10 +54,11 @@ export default function Skills() {
       tl.to(skillsFront[x], {
         scrollTrigger: {
           trigger: skillsFront[x],
-          start: "center 500",
+          start: "center 750",
           end: 1000,
           scrub: 2,
         },
+        transform:"rotate(0deg)",
         color: "white",
         opacity: 1,      
       });
@@ -121,11 +122,13 @@ export default function Skills() {
                     text-[18px]
                     my-2
                     mx-4
-                    text-indigo-800
+                    text-slate-100/[0]
                     border-orange-200
                     border-solid
                     border-2
                     rounded-xl
+                    rotate-90
+                    opacity-0
                     z-10
                   `}
               >
