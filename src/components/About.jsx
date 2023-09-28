@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import images from "./Images";
+  
+  import images from "./Images";
 
 export default function About() {
   let lettersString =
