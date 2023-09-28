@@ -116,7 +116,7 @@ export default function Skills() {
                 key={i}
                 id="skillsFront"
                   className={`
-                    float-right   
+                    float-left
                     flex
                     items-center
                     justify-around

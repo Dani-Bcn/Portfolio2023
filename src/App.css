@@ -7,7 +7,7 @@
       clip-path: circle(0% at 50% 50%); 
   }
   .clip-circle-25 { 
-      clip-path: circle(29% at 50% 50%); 
+      clip-path: circle(28% at 50% 50%); 
   }
   .clip-circle-70 { 
       clip-path: circle(70% at 50% 50%); 
@@ -23,8 +23,10 @@
   padding: 0;
   list-style: none;
   text-decoration: none;
+
 }
 html{
+  overflow-x: hidden;
   background-color: rgb(54, 54, 54);
 }
 

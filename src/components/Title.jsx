@@ -5,6 +5,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 export default function Title() {
 
     gsap.registerPlugin(ScrollTrigger)
+  
 
   useEffect(() => {
     gsap.to("#title1", {
@@ -15,6 +16,7 @@ export default function Title() {
         scrub: 2,
       },
       x: -1100,
+      opacity:0
     });
     gsap.to("#title2", {
         scrollTrigger: {
@@ -24,6 +26,7 @@ export default function Title() {
           scrub: 2,
         },
         x: 1100,
+        opacity:0
       });
   },[]);
 
@@ -31,8 +34,8 @@ export default function Title() {
     <main
       className="
             w-full
-            h-screen
             bg-slate-700
+            h-screen
             flex
             justify-center
             items-center
@@ -59,6 +62,7 @@ export default function Title() {
         className="
         font-Play
         text-orange-200
+        opacity-1
         "
 
         >
@@ -70,6 +74,7 @@ export default function Title() {
             ml-12 
             font-Play
             text-orange-200
+            opacity-1
             " >Pérez</h1>
       </div>
     </main>
