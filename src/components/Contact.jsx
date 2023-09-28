@@ -17,6 +17,7 @@ export default function Contact() {
             text-slate-50
             text-4xl
             md:text-2xl
+            z-10
         "
     > <h2>Contact</h2>
       <section

@@ -84,7 +84,6 @@ export default function Skills() {
           justify-between
           md:1/2
           m-auto
-          bg-slate-700
        "
       >
         <span>

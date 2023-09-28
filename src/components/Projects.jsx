@@ -11,7 +11,7 @@ export default function Projects() {
             flex-col
             justify-start
             items-center
-            bg-slate-700
+            z-10
         "
     >
       <h2

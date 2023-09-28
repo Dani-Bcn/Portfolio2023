@@ -17,7 +17,8 @@ export default function NavResponsive() {
           marginTop: 750,
           ease: "expo.in",
           clipPath: "circle( 25.7% at 50% 50%)",
-          duration: 1,
+          duration: 0.5,
+          opacity:0
         });
   }, [menuActive]);
 
@@ -97,7 +98,7 @@ export default function NavResponsive() {
             flex-col
             justify-around
             items-center
-            bg-red-300
+            bg-indigo-300
             opacity-0
             text-slate-50         
             clip-circle-25

@@ -5,15 +5,14 @@ import { ScrollTrigger } from "gsap/all";
 export default function About() {
   let lettersString =
     "An LA-based , award-winning design ,director and UI/UX ,design ,expert with 10 years ,of experience in ,design and ,management.";
+
   gsap.registerPlugin(ScrollTrigger);
+
   let lettersArray = lettersString.split(" ,"); 
-
-  const tl = gsap.timeline();
-
 
     const leters = document.querySelectorAll("#lettersArray");
 
- 
+
 
   return (
     <main
@@ -22,7 +21,8 @@ export default function About() {
       oveflow-x-hidden
       w-screen
       h-screen
-      bg-slate-700
+      md:-mt-0
+      -mt-64
       flex
       flex-col
       items-center
