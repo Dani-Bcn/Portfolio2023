@@ -7,6 +7,7 @@ export default function NavResponsive() {
   useEffect(() => {
     menuActive
       ? gsap.to("#menu", {
+          opacity:1,
           marginTop: 0,
           ease: "expo.out",
           clipPath: "circle( 70.7% at 50% 50%)",
@@ -23,13 +24,13 @@ export default function NavResponsive() {
   return (
     <main
       className="    
-      md:hidden   
+        md:hidden   
         absolute
         w-screen
         h-screen
         items-center
         justify-center
-        z-10       
+        z-20     
         "
     >
       <div
@@ -52,13 +53,12 @@ export default function NavResponsive() {
             flex
             items-center
             justify-center
-            bg-indigo-300
+            bg-orange-300
             rounded-[100px]
             text-slate-50              
             "
           onClick={() => setMenuActive(!menuActive)}
         >
-          {" "}
           <Link
             to="contact"
             spy={true}
@@ -78,7 +78,7 @@ export default function NavResponsive() {
             flex
             items-center
             justify-center
-            bg-indigo-300
+            bg-orange-300
             rounded-[100px]
             text-slate-50               
             "
@@ -98,8 +98,8 @@ export default function NavResponsive() {
             justify-around
             items-center
             bg-red-300
-            text-slate-50
-         
+            opacity-0
+            text-slate-50         
             clip-circle-25
             "
       >
@@ -129,6 +129,7 @@ export default function NavResponsive() {
           <Link
             to="skills"
             spy={true}
+            offset={-50}
             smooth={"easeInOutQuart"}
             duration={2000}
             onClick={() => setMenuActive(!menuActive)}

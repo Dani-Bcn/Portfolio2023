@@ -21,7 +21,7 @@ export default function Links() {
       >
         <button
           className="
-              w-28
+              w-24
               h-full
              
               flex
@@ -55,7 +55,7 @@ export default function Links() {
       <a href="https://github.com/Dani-Bcn"  target="_blank">
         <button
           className="
-              w-28
+              w-24
               h-full
               rounded-[40px]
               bg-indigo-300

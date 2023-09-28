@@ -4,125 +4,66 @@ import { ScrollTrigger } from "gsap/all";
 
 export default function About() {
   let lettersString =
-    "An LA-based ,award-winning design ,director and UI/UX ,design ,expert with 10 years ,of experience in ,design and ,management.";
+    "An LA-based , award-winning design ,director and UI/UX ,design ,expert with 10 years ,of experience in ,design and ,management.";
   gsap.registerPlugin(ScrollTrigger);
-  let lettersArray = lettersString.split(" ,");
- 
+  let lettersArray = lettersString.split(" ,"); 
 
   const tl = gsap.timeline();
-  useEffect(() => {
 
-    gsap.to("#textAbout", {
-      scrollTrigger: {
-        trigger: "#textAbout",
-        start: "center 800",
-        end: 1000,    
-        scrub: 2,
-      },
-      x:100,
-      opacity: 1,
-    });
-    
-    gsap.to("#underAbout", {
-      scrollTrigger: {
-        trigger: "#underAbout",
-        start: "center 850",
-        end: 1000,    
-        scrub: 2,
-      },
-      marginLeft:0,
-      backgroundColor:"white"
-    });
+
     const leters = document.querySelectorAll("#lettersArray");
 
-    for (let x = 0; x < lettersArray.length; x++) {
-      tl.to(leters[x], {
-        scrollTrigger: {
-          trigger: leters[x],
-          start: "center 900",
-          end: 800,      
-          scrub: 2,
-        },
-        opacity: 1,
-        marginTop:0
-      });      
-    }
-  });
+ 
 
   return (
     <main
       id="about"
       className="
+      oveflow-x-hidden
       w-screen
       h-screen
+      bg-slate-700
+      flex
+      flex-col
+      items-center
+      justify-around
+      md:justify-start
       z-10
-      bg-slate-800
       "     
     >
-      <section
-         className="
-         flex
-         flex-col
-         items-center
-         justify-center
-         w-[80%]
-         ml-10
-         x:50
-         h-[600px]   
-       "
+      <span
+        className="
+          w-screen
+          flex
+          flex-col
+          items-center
+          justify-centen
+        "
       >
       <h2
-      id="textAbout"
-        className="    
-        opacity-0               
-        mt-20
-        ml-[-200px]
-        h-24
-        text-slate-50
-        text-6xl
-      "
-      >
-        About me
-      </h2>
-      <div
-        id="underAbout"
         className="
-          w-64
-          h-1
-          -mt-5
-          ml-[100px]
-          mb-10          
-          bg-slate-50/[0]
+          pt-24
+          text-4xl
+          text-orange-200
+        "
+      >About</h2>
+      <div
+        className="
+          w-32
+          h-0.5
+          bg-orange-200
         "
       ></div>
-      <section
-        className="       
-          float-left
-          w-10/12
-          h-72
+
+      <p
+        className="
+          w-4/5
+          mt-10
+          text-orange-200
+          text-2xl
         "
-      >
-        {lettersArray.map((e, i) => {
-          return (
-            <h4
-              key={i}
-              id="lettersArray"
-              className=" 
-              float-left              
-                opacity-0
-                mt-[50px]
-                text-transparent
-                bg-clip-text
-                bg-indigo-400
-                text-2xl
-              "
-            >
-              {e}
-            </h4>
-          );
-        })}
-      </section>
-      </section>
+      >Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam dolorem ea assumenda exercitationem perspiciatis temporibus amet dolor nihil fugit, soluta laudantium in voluptate? In, debitis odit assumenda saepe totam quisquam.</p>
+    </span>
     </main>
   );
 }

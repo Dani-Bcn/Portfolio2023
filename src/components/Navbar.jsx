@@ -36,6 +36,7 @@ export default function Navbar() {
           <Link
             to="skills"
             spy={true}
+            offset={-50}
             smooth={"easeInOutQuart"}
             duration={2000}
           >

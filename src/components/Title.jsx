@@ -32,7 +32,7 @@ export default function Title() {
       className="
             w-full
             h-screen
-            bg-slate-800
+            bg-slate-700
             flex
             justify-center
             items-center

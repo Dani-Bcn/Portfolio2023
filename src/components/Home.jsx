@@ -11,8 +11,11 @@ export default function Home() {
     <main
       id="home"
       className="
-        overflow-x-hidden
+        overflow-hidden
         w-screen
+        flex
+        flex-col
+        justify-between
         absolute
         "
     >
@@ -22,7 +25,7 @@ export default function Home() {
       <About />
       <Skills />
       <Projects/>
-      <Contact/>
+      <Contact/> 
     </main>
   );
 }
