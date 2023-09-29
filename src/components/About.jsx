@@ -92,8 +92,9 @@ export default function About() {
 
         <p
           className="
-          w-4/5
-          mt-10
+          w-10/12
+          md:w-2/4
+          py-10
           text-orange-200
           text-2xl
         "

@@ -68,6 +68,8 @@ export default function Skills() {
   return (
     <main
       className="
+      md:mt-32
+      xl:-mt-20
         z-10
         w-screen
       "
