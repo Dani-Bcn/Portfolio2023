@@ -68,7 +68,7 @@ export default function Projects() {
 
       {imagesPojects.map((e, i) => {
         return (
-          <>
+          <div key={i}>
            
               <h3
                 className="
@@ -135,7 +135,7 @@ export default function Projects() {
                 </p>
               </a>
             </div>
-          </>
+          </div>
         );
       })}
     </main>

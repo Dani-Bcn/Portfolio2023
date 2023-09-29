@@ -5,18 +5,52 @@ import { ScrollTrigger } from "gsap/all";
 import images from "./Images";
 
 export default function About() {
-  let lettersString =
-    "Passionate about programming and graphic design, I understood that my professional life had to change. I decided to leave my job after six years at my six years in it, to start a programming bootcamp and try to dedicate myself programming and try to dedicate myself to it professionally";
+
+  let lettersString ="Passionate about programming and, graphic design, I understood that my, professional life had to change. I, decided to leave my job after six years, at my six years in it, to start a, programming bootcamp and try to, dedicate myself programming and try, to dedicate myself to it professionally";
+
+ 
 
   gsap.registerPlugin(ScrollTrigger);
 
-  let lettersArray = lettersString.split(" ,");
+  let lettersArray = lettersString.split(", ");
 
-  const leters = document.querySelectorAll("#lettersArray");
+  let lettersAbout = ["A","b","o","u","t"]
 
-  let mm = gsap.matchMedia();
 
    useEffect(()=>{
+let tl = gsap.timeline()
+ const leters = document.querySelectorAll("#lettersArray");
+ const lettersIdAbout = document.querySelectorAll("#lettersAbout")
+ for(let x= 0 ; x < lettersAbout.length;x++){
+
+  tl.to(lettersIdAbout[x],{
+    scrollTrigger:{
+      trigger:lettersIdAbout[x],
+      start:"center 700",
+      end:1000,
+      scrub:2
+    },
+    y:-400,
+    opacity:1
+  })
+
+
+}
+    for(let x= 0 ; x < lettersArray.length;x++){
+
+      tl.to(leters[x],{
+        scrollTrigger:{
+          trigger:leters[x],
+          start:"center 700",
+          end:1000,
+          scrub:2
+        },
+        opacity:1,
+        y:-500,
+      })
+
+
+    }
 
     gsap.to("#photo",{
       scrollTrigger:{
@@ -29,9 +63,7 @@ export default function About() {
       clipPath:"circle(28% at 50% 30%)"
     })
 
-   })
-   
- 
+   },[])
 
   return (
     <main
@@ -59,28 +91,52 @@ export default function About() {
           justify-centen
         "
       >
+          <article id="lettersAbout"
+            className="
+              flex
+              opacity-0
+            "
+          >
+        {
+          lettersAbout.map((e,i)=>(
+           
+         
         <h2
+        key={i}
+       
           className="
           pt-24
           text-5xl
           text-orange-200
           z-10
         "
-        >
-          About
+        > 
+          {e}
         </h2>
-        <p
-          className="
-          w-10/12
-          md:w-2/4
-          py-10
-          text-orange-200
-          text-2xl
-          z-10
-        "
+          ))
+} 
+</article>
+        <article
+        
         >
-          {lettersString}
-        </p>
+          {
+          lettersArray.map((e,i)=>(
+            <h3 
+            id="lettersArray"             
+            key={i}
+            className="
+            text-[1.3rem]
+            text-orange-200
+            opacity-0
+            "
+            >{e}
+            
+            </h3>
+
+          ))
+          
+          }
+          </article>
       </span>
       <img
         src={images[3]}
