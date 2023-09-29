@@ -40,7 +40,7 @@ export default function Contact() {
                     text-white
                     h-12
                     z-10
-                    md:text-5xl
+                    md:text-4xl
                     "
           >
             nneodani@gmail.com

@@ -60,8 +60,8 @@ useEffect(()=>{
         className="
             h-96
             w-96
-            md:w-96
-            md:h-96
+            md:w-80
+            md:h-80
             bg-indigo-400
             rounded-[500px]
             cursor-pointer

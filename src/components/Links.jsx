@@ -4,22 +4,21 @@ export default function Links() {
   return (
     <main
       className="
-           text-white
-            text-xl
-             w-[90%]
-             h-10
-             md:h-1
-                    flex
-                    items-center
-                    justify-around
-                    z-10
-                "
+       text-white
+        text-xl
+        w-[90%]
+        h-10
+        md:h-1
+        flex
+        items-center
+        justify-around
+        z-10
+      "
     >
       <a
         href="https://www.linkedin.com/in/daniperezbnc/"
         target="_blank"
-      >
-        
+      >        
         <button id="buttonLinks">       
           Linkedin
         </button>
