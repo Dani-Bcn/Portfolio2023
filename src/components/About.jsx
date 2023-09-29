@@ -40,8 +40,8 @@ export default function About() {
       oveflow-x-hidden
       w-screen
       h-screen
-      md:-mt-0
-     
+      -mt-80
+      md:-mt-0     
       flex
       flex-col
       items-center

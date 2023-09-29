@@ -28,15 +28,17 @@ export default function Contact() {
           flex-col
           justify-around
           items-center
-          w-10/12
+          w-1/1
           h-1/2
         "
       >
+
+        
        
         <a href="mailto:nneodani@gmail.com">
           <h3
             className="                   
-                    w-full
+                  
                     text-white
                     h-12
                     z-10

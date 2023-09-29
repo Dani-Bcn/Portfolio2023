@@ -25,7 +25,7 @@ export default function NavResponsive() {
   return (
     <main
       className="    
-        md:hidden   
+       xl:hidden   
         absolute
         w-screen
         h-screen
@@ -37,7 +37,7 @@ export default function NavResponsive() {
       <div
         className="
             fixed
-            md:hidden
+           xl:hidden
             w-full
             h-16
             flex

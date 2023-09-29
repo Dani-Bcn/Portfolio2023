@@ -6,7 +6,7 @@ export default function Navbar() {
       className="
       fixed
          hidden
-         md:flex
+         xl:flex
          w-20
          h-screen
          items-center

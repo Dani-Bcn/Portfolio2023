@@ -17,8 +17,8 @@ export default function Projects() {
       title:"App movies"
     },
     {
-      link: "https://apiappmovies.netlify.app/",
-      img: images[1],
+      
+      img: images[2],
       title:"Homeworks for kids"
     },
   ];
@@ -30,20 +30,17 @@ export default function Projects() {
 
     const imagesComp = document.querySelectorAll("#imagesComp");
 
-    tl.set(imagesComp, {
-      clipPath: "circle(0.1% at 50% 50%)",
-      delay: 5,
-    });
+    
 
     for (let x = 0; x < imagesPojects.length; x++) {
       tl.to(imagesComp[x], {
         scrollTrigger: {
           trigger: imagesComp[x],
-          start: "center center",
+          start: "center 700",
           end: 50,
           scrub: 2,
         },
-        clipPath: "circle(20% at 50% 50%)",
+       
       });
     }
   },);
@@ -72,7 +69,7 @@ export default function Projects() {
      
       {imagesPojects.map((e, i) => {
         return (
-          <a key={i} href={imagesPojects[i].link}>
+          <a key={i} href={e.link}>
             <h3
                 className="
                     my-1
@@ -82,19 +79,19 @@ export default function Projects() {
                     text-3xl
                     text-orange-200
                 "
-            >{imagesPojects[i].title}</h3>
-            <img            
-                id="imagesComp"
-                className="
-                w-screen
-                clip-circle-0
-                flex
-                items-center
-                justify-center
-            "
-                src={imagesPojects[i].img}
-                alt="imgAll"
-            />
+            >{e.title}</h3>
+           <img  width={500} src={e.img} alt="img-all"
+           className="
+            my-10
+            rounded-xl
+            border-orange-300
+            border-[1px]
+            border-solid
+            md:w-1/2
+            w-10/12
+            m-auto
+           "
+           />
           </a>
         );
       })}
@@ -105,7 +102,7 @@ export default function Projects() {
             flex
             items-center
             justify-around
-            "
+          "
       >
         <a
           href="https://github.com/Dani-Bcn/Home-works-frontEnd"

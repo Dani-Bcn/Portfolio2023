@@ -6,9 +6,10 @@ export default function Links() {
       className="
        text-white
         text-xl
-        w-[90%]
+        w-1/2
         h-10
         md:h-1
+        py-10
         flex
         items-center
         justify-around
