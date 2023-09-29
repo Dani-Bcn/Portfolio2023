@@ -25,7 +25,7 @@ export default function About() {
         end:1500,
         scrub:2
       },
-      x:500,
+      x:650,
       clipPath:"circle(28% at 50% 30%)"
     })
 
