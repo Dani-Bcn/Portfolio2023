@@ -16,36 +16,22 @@ export default function About() {
 
   let mm = gsap.matchMedia();
 
-  useEffect(() => {
-    mm.add("(max-width:400px)", () => {
-      gsap.to("#photo", {
-        scrollTrigger: {
-          trigger: "#photo",
-          start: "center 1000",
-          end: 1500,
-          scrub: 2,
-        },
-        x: 520,
-        opacity: 1,
-        scale: 1,
-        clipPath: "circle(28% at 50% 25%)",
-      });
-    });
-    mm.add("(min-width:400px)", () => {
-      gsap.to("#photo", {
-        scrollTrigger: {
-          trigger: "#photo",
-          start: "center center",
-          end: 1000,
-          scrub: 2,
-        },
-        x: 2000,
-        opacity: 0.8,
-        scale: 1,
-        clipPath: "circle(28% at 50% 25%)",
-      });
-    });
-  });
+   useEffect(()=>{
+
+    gsap.to("#photo",{
+      scrollTrigger:{
+        trigger:"#photo",
+        start:"center 1500",
+        end:1500,
+        scrub:2
+      },
+      x:500,
+      clipPath:"circle(28% at 50% 30%)"
+    })
+
+   })
+   
+ 
 
   return (
     <main
@@ -55,7 +41,7 @@ export default function About() {
       w-screen
       h-screen
       md:-mt-0
-      -mt-64
+     
       flex
       flex-col
       items-center
@@ -78,18 +64,11 @@ export default function About() {
           pt-24
           text-5xl
           text-orange-200
+          z-10
         "
         >
           About
         </h2>
-        <div
-          className="
-          w-32
-          h-0.5
-          bg-orange-200
-        "
-        ></div>
-
         <p
           className="
           w-10/12
@@ -97,6 +76,7 @@ export default function About() {
           py-10
           text-orange-200
           text-2xl
+          z-10
         "
         >
           {lettersString}
@@ -104,17 +84,18 @@ export default function About() {
       </span>
       <img
         src={images[3]}
-        alt="img-photo"
-        width={700}
+        alt="photo"
         id="photo"
-        className="
-          -ml-96
-          md:-mt-32
-          md:-ml-[1900px]
-          sm:mt-80
-          absolute
-          opacity-0
-          clip-circle-photo
+        width={600}
+        className="  
+        absolute
+        md:ml-[-250px]
+        md:mt-20
+        -ml-[1000px]
+        mt-[800px]
+        xl:ml-[60px]
+         z-1
+         clip-circle-photo
         "
       />
     </main>

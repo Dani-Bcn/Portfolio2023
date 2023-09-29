@@ -68,6 +68,7 @@ export default function Skills() {
   return (
     <main
       className="
+      mt-32
       md:mt-32
       xl:-mt-20
         z-10
@@ -92,13 +93,6 @@ export default function Skills() {
           text-orange-200
         "
       >Skills</h2>
-      <div
-        className="
-          w-full
-          h-0.5
-          bg-orange-200
-        "
-      ></div>
       </span>
         <section
           className="
