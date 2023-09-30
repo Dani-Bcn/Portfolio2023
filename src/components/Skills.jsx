@@ -3,9 +3,8 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 export default function Skills() {
-  
   gsap.registerPlugin(ScrollTrigger);
-  
+
   const wordsFrontEnd = [
     "Html",
     "Css",
@@ -31,42 +30,45 @@ export default function Skills() {
     "Cinema4D",
     "Blender",
   ];
-  const clipEfects=[
-    "polygon(25% 550%, 100% 0%, 30% 10%, 0% 100%)",
-    "polygon(105% 550%, 100% 50%, 30% 10%, 0% 100%)"
-  ]
+  const arrayTitle = ["S","k","i","l","l","s"];
 
   const tl = gsap.timeline();
 
   useEffect(() => {
+    tl.set("#skillsFront", {   
+      opacity: 0,
+      scale: 0,
+    });
 
-   
-    tl.set("#skillsFront", {
-     
-      delay: 1,
-      opacity:0,
-      scale:0
-     
-    });   
+    tl.to("#titleSkills", {
+      scrollTrigger: {
+        trigger: "#titleSkills",
+        start:"center 400",
+        end:1000,
+        scrub:1,
+      },
+      opacity:1,
+      y:-50,
+    scale:1.1,
+    stagger:0.1,
+    ease:"back"
+  })  
 
-  
-     
-      tl.to("#skillsFront", {
-        scrollTrigger: {
-          trigger: "#skillsFront",
-          start: "center 600",
-          end: 1250,
-          scrub: 2,
-        },
-        scale:1,
-        duration:2,
-        stagger:0.5,
-        transform:"rotate(0deg)",
-        color: "white",
-        opacity: 1,   
-      });
-    })
-
+    tl.to("#skillsFront", {
+      scrollTrigger: {
+        trigger: "#skillsFront",
+        start: "center 600",
+        end: 1250,
+        scrub: 2,
+      },
+      scale: 1,
+      duration: 2,
+      stagger: 0.5,
+      transform: "rotate(0deg)",
+      color: "white",
+      opacity: 1,
+    });
+  });
 
   return (
     <main
@@ -89,14 +91,26 @@ export default function Skills() {
           m-auto
        "
       >
-        <span>
-        <h2
-        className="
-          text-5xl
-          text-orange-200
-        "
-      >Skills</h2>
-      </span>
+        <span
+          className="
+          flex
+          "
+        >
+        
+          {
+          arrayTitle.map((e,i) => (
+            <h2
+            key={i}
+              id="titleSkills"
+              className="
+              text-5xl
+              text-orange-200
+              opacity-0
+              scale-0
+            "
+            >{e}</h2>
+          ))}
+        </span>
         <section
           className="
             mt-10
@@ -111,7 +125,7 @@ export default function Skills() {
               <p
                 key={i}
                 id="skillsFront"
-                  className={`
+                className={`
                     float-left
                     flex
                     items-center
