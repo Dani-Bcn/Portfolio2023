@@ -6,51 +6,60 @@ import images from "./Images";
 
 export default function About() {
 
-  let lettersString ="Passionate about programming and, graphic design, I understood that my, professional life had to change. I, decided to leave my job after six years, at my six years in it, to start a, programming bootcamp and try to, dedicate myself programming and try, to dedicate myself to it professionally";
+  let lettersString ="Passionate about programming and graphic design. I understood that my professional life had to change. I decided to leave my job after six years at my six years in it to start a programming bootcamp and try to dedicate myself programming and try to dedicate myself to it professionally";
 
- 
+   gsap.registerPlugin(ScrollTrigger);
 
-  gsap.registerPlugin(ScrollTrigger);
-
-  let lettersArray = lettersString.split(", ");
+  let lettersArray = lettersString.split(" ");
+  console
 
   let lettersAbout = ["A","b","o","u","t"]
 
 
    useEffect(()=>{
+
 let tl = gsap.timeline()
- const leters = document.querySelectorAll("#lettersArray");
- const lettersIdAbout = document.querySelectorAll("#lettersAbout")
- for(let x= 0 ; x < lettersAbout.length;x++){
-
-  tl.to(lettersIdAbout[x],{
-    scrollTrigger:{
-      trigger:lettersIdAbout[x],
-      start:"center 700",
-      end:1000,
-      scrub:2
-    },
-    y:-400,
-    opacity:1
-  })
 
 
-}
-    for(let x= 0 ; x < lettersArray.length;x++){
-
-      tl.to(leters[x],{
-        scrollTrigger:{
-          trigger:leters[x],
-          start:"center 700",
-          end:1000,
-          scrub:2
-        },
-        opacity:1,
-        y:-500,
+      gsap.set("#lettersAbout",{
+        scale:0
+      })
+      gsap.set("#lettersArray",{
+        scale:0
       })
 
 
-    }
+      
+         tl.to("#lettersAbout",{
+
+          scrollTrigger:{
+            trigger:"#lettersAbout",
+            start:"center 600",
+            end:400,
+            scrub:1,
+          },
+          opacity:1,
+          y:-50,
+        scale:1.1,
+        stagger:0.1,
+        ease:"back"
+      })  
+
+      tl.to("#lettersArray",{
+        scrollTrigger:{
+          trigger:"#lettersArray",
+          start:"center 750",
+          end:500,
+          scrub:2
+        },
+        scale:1,
+        stagger:0.01,
+        opacity:1,
+        y:-50,
+      })
+
+
+    
 
     gsap.to("#photo",{
       scrollTrigger:{
@@ -60,6 +69,8 @@ let tl = gsap.timeline()
         scrub:2
       },
       x:650,
+      opacity:1,
+      scale:1.5,
       clipPath:"circle(28% at 50% 30%)"
     })
 
@@ -73,7 +84,7 @@ let tl = gsap.timeline()
       w-screen
       h-screen
       -mt-80
-      md:-mt-0     
+      md:mt-20     
       flex
       flex-col
       items-center
@@ -91,21 +102,19 @@ let tl = gsap.timeline()
           justify-centen
         "
       >
-          <article id="lettersAbout"
+          <article 
             className="
-              flex
-              opacity-0
+              flex            
             "
           >
         {
-          lettersAbout.map((e,i)=>(
-           
+          lettersAbout.map((e,i)=>(           
          
         <h2
-        key={i}
-       
+        key={i} 
+        id="lettersAbout"      
           className="
-          pt-24
+          opacity-0
           text-5xl
           text-orange-200
           z-10
@@ -117,7 +126,13 @@ let tl = gsap.timeline()
 } 
 </article>
         <article
-        
+          className="
+          flex         
+          mt-10
+            w-10/12
+            md:w-1/2
+            flex-wrap
+          "
         >
           {
           lettersArray.map((e,i)=>(
@@ -129,13 +144,11 @@ let tl = gsap.timeline()
             text-orange-200
             opacity-0
             "
-            >{e}
-            
+            > {e}&nbsp;           
             </h3>
-
-          ))
-          
+          ))          
           }
+          
           </article>
       </span>
       <img
@@ -146,12 +159,13 @@ let tl = gsap.timeline()
         className="  
         absolute
         md:ml-[-250px]
-        md:mt-20
+        md:-mt-36
         -ml-[1000px]
-        mt-[800px]
+        mt-[600px]
         xl:ml-[60px]
          z-1
          clip-circle-photo
+         opacity-0
         "
       />
     </main>

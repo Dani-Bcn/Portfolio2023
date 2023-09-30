@@ -40,30 +40,33 @@ export default function Skills() {
 
   useEffect(() => {
 
-    var skillsFront = document.querySelectorAll("#skillsFront");   
-
-    tl.set(skillsFront, {
-      color: "rgb(50,250,250)",
+   
+    tl.set("#skillsFront", {
+     
       delay: 1,
       opacity:0,
+      scale:0
      
     });   
 
-    for (let x = 0; x < wordsFrontEnd.length; x++) {
+  
      
-      tl.to(skillsFront[x], {
+      tl.to("#skillsFront", {
         scrollTrigger: {
-          trigger: skillsFront[x],
-          start: "center 750",
-          end: 1000,
+          trigger: "#skillsFront",
+          start: "center 600",
+          end: 1250,
           scrub: 2,
         },
+        scale:1,
+        duration:2,
+        stagger:0.5,
         transform:"rotate(0deg)",
         color: "white",
-        opacity: 1,      
+        opacity: 1,   
       });
-    }
-  });
+    })
+
 
   return (
     <main
