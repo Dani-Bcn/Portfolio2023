@@ -1,7 +1,7 @@
 import image1 from "../img/img-poke.jpg"
 import image2 from "../img/img-movies.jpg"
 import image3 from "../img/img-kids.jpg"
-import image4 from "../img/photo.jpeg"
+import image4 from "../img/photo.jpg"
 const images =[
     image1,
     image2,
