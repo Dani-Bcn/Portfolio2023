@@ -124,7 +124,7 @@ export default function Projects() {
               my-10
                bg-no-repeat
               bg-[0%]
-              bg-[url(${e.img})]
+              bg-[url(${images[i]})]
               `}
               ></div>
             </a>
