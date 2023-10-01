@@ -16,7 +16,7 @@ export default function Projects() {
       title: "App movies",
     },
     {
-      img: images[2],
+      img: images[3],
       title: "Homeworks for kids",
     },
   ];
@@ -25,9 +25,9 @@ export default function Projects() {
   const titleProjects = ["P", "r", "o", "j", "e", "c", "t", "s"];
 
   gsap.registerPlugin(ScrollTrigger);
-
-  useEffect(() => {
     const tl = gsap.timeline();
+  useEffect(() => {
+
    
       tl.to("#titleProjects", {
         scrollTrigger: {
@@ -98,7 +98,8 @@ export default function Projects() {
         ))}
       </article>
 
-      {imagesPojects.map((e, i) => {
+      {
+      imagesPojects.map((e, i) => {
         return (
           <div key={i}>
             <h3
@@ -124,7 +125,7 @@ export default function Projects() {
               my-10
                bg-no-repeat
               bg-[0%]
-              bg-[url(${images[i]})]
+              bg-[url(${imagesPojects.img})]
               `}
               ></div>
             </a>
