@@ -21,7 +21,7 @@ export default function Projects() {
     },
   ];
 
-  console.log(images[2])
+  
   const titleProjects = ["P", "r", "o", "j", "e", "c", "t", "s"];
 
   gsap.registerPlugin(ScrollTrigger);
