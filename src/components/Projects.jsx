@@ -21,28 +21,48 @@ export default function Projects() {
     },
   ];
 
-  gsap.registerPlugin(ScrollTrigger);
+  console.log(images[2])
+  const titleProjects = ["P", "r", "o", "j", "e", "c", "t", "s"];
 
- 
- 
+  gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
     const tl = gsap.timeline();
-
-    const imagesComp = document.querySelectorAll("#imagesComp");
-
-    for (let x = 0; x < imagesPojects.length; x++) {
-      tl.to(imagesComp[x], {
+   
+      tl.to("#titleProjects", {
         scrollTrigger: {
-          trigger: imagesComp[x],
-          start: "center 450",
-          end: 150,
+          trigger: "#titleProjects",
+          start: "center 600",
+          end: 550,
           scrub: 2,
         },      
-        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"
+        stagger:0.1,
+        scale:1,
+        y:-50,
       });
-    }
-  });
+
+      gsap.set("#imgProjects",{
+        backgroundSize:"100% 100%",
+        backgroundPositionX:"0px",
+        opacity:0,
+        y:50,
+      })
+      
+      tl.to("#imgProjects",{
+        scrollTrigger:{
+          trigger:"#imgProjects",
+          start:"center 900",
+          end:4000,
+          scrub:2
+        },
+        y:0,
+        opacity:1,
+        stagger:0.1,
+        backgroundSize:"150% 150%",
+        backgroundPositionX:"-75px"
+      })
+
+  }, []);
 
   return (
     <main
@@ -56,22 +76,33 @@ export default function Projects() {
             z-10
         "
     >
-      <h2
+      <article
         className="
+          flex
+        "
+      >
+        {titleProjects.map((e, i) => (
+          <h2
+            key={i}
+            id="titleProjects"
+            className="
+           mt-52
             my-20
             text-5xl
             text-orange-200
+            scale-0
             "
-      >
-        Projects
-      </h2>
+          >
+            {e}
+          </h2>
+        ))}
+      </article>
 
       {imagesPojects.map((e, i) => {
         return (
           <div key={i}>
-           
-              <h3
-                className="
+            <h3
+              className="
                     my-1
                     flex
                     items-center
@@ -79,27 +110,23 @@ export default function Projects() {
                     text-3xl
                     text-orange-200
                 "
-              >
-                {e.title}
-              </h3> 
-              <a key={i} href={e.link}>
-              <img
-              id="imagesComp"
-                width={500}
-                src={e.img}
-                alt="img-all"
-                className="
-                  my-10
-                  rounded-xl
-                  border-orange-300
-                  border-[1px]
-                  border-solid
-                  md:w-1/2
-                  w-10/12
-                  m-auto
-                  clip-box
-                "
-              />
+            >
+              {e.title}
+            </h3>
+            <a key={i} href={e.link}>
+              <div id="imgProjects"
+              className={`
+              mx-auto
+              w-10/12
+              md:w-1/2
+              md:h-96
+              h-52
+              my-10
+               bg-no-repeat
+              bg-[0%]
+              bg-[url(${e.img})]
+              `}
+              ></div>
             </a>
             <div
               className="

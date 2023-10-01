@@ -4,7 +4,8 @@ export default function Navbar() {
   return (
     <main
       className="
-      fixed
+        fixed
+        mx-5
          hidden
          xl:flex
          w-20
