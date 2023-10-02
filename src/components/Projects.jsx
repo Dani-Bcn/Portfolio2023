@@ -16,53 +16,60 @@ export default function Projects() {
       title: "App movies",
     },
     {
-      img: images[3],
+      img: images[2],
       title: "Homeworks for kids",
     },
   ];
 
-  
   const titleProjects = ["P", "r", "o", "j", "e", "c", "t", "s"];
 
   gsap.registerPlugin(ScrollTrigger);
-    const tl = gsap.timeline();
+  const tl = gsap.timeline();
   useEffect(() => {
+    tl.to("#titleProjects", {
+      scrollTrigger: {
+        trigger: "#titleProjects",
+        start: "center 600",
+        end: 550,
+        scrub: 2,
+      },
+      stagger: 0.1,
+      scale: 1,
+      y: -50,
+    });
 
-   
-      tl.to("#titleProjects", {
-        scrollTrigger: {
-          trigger: "#titleProjects",
-          start: "center 600",
-          end: 550,
-          scrub: 2,
-        },      
-        stagger:0.1,
-        scale:1,
-        y:-50,
-      });
+    gsap.set("#imgProjects", {
+      backgroundSize: "100% 100%",
+      backgroundPositionX: "0px",
+      scale: 1.1,
+    });
 
-      gsap.set("#imgProjects",{
-        backgroundSize:"100% 100%",
-        backgroundPositionX:"0px",
-        opacity:0,
-        y:50,
-      })
-      
-      tl.to("#imgProjects",{
-        scrollTrigger:{
-          trigger:"#imgProjects",
-          start:"center 900",
-          end:4000,
-          scrub:2
-        },
-        y:0,
-        opacity:1,
-        stagger:0.1,
-        backgroundSize:"150% 150%",
-        backgroundPositionX:"-75px"
-      })
+  /*   gsap.set("#cntImgProjects", {
+      scale: 0.1,
+    }); */
 
+    tl.to("#imgProjects", {
+      scrollTrigger: {
+        trigger: "#imgProjects",
+        start: "center 900",
+        end: 6000,
+        scrub: 1,
+      },
+      scale: 5,
+      stagger: 0.1,
+    });
+    /* tl.to("#cntImgProjects", {
+      scrollTrigger: {
+        trigger: "#imgProjects",
+        start: "center 900",
+        end: 4000,
+        scrub: 1,
+      },
+      stagger: 0.5,
+      scale: 1,
+    }); */
   }, []);
+  console.log(images[0]);
 
   return (
     <main
@@ -98,13 +105,12 @@ export default function Projects() {
         ))}
       </article>
 
-      {
-      imagesPojects.map((e, i) => {
+      {imagesPojects.map((e, i) => {
         return (
           <div key={i}>
             <h3
               className="
-                    my-1
+                    my-5
                     flex
                     items-center
                     justify-center
@@ -115,19 +121,27 @@ export default function Projects() {
               {e.title}
             </h3>
             <a key={i} href={e.link}>
-              <div id="imgProjects"
-              className={`
-              mx-auto
-              w-10/12
-              md:w-1/2
-              md:h-96
-              h-52
-              my-10
-               bg-no-repeat
-              bg-[0%]
-              bg-[url(${imagesPojects.img})]
-              `}
-              ></div>
+              <div
+              id="cntImgProjects"
+                className="           
+                 my-10
+                  mx-auto
+                  bg-slate-100
+                  clip-circle-full
+                  flex
+                  items-center
+                  justify-center
+                "
+              >
+                <img
+                  id="imgProjects"
+                  className="
+              w-[700px]
+             "
+                  src={e.img}
+                  alt=""
+                />
+              </div>
             </a>
             <div
               className="
