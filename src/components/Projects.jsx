@@ -41,7 +41,7 @@ export default function Projects() {
     gsap.set("#imgProjects", {
       backgroundSize: "100% 100%",
       backgroundPositionX: "0px",
-      scale: 1.1,
+      scale: 5,
     });
 
   /*   gsap.set("#cntImgProjects", {
@@ -52,11 +52,11 @@ export default function Projects() {
       scrollTrigger: {
         trigger: "#imgProjects",
         start: "center 900",
-        end: 6000,
+        end: 3500,
         scrub: 1,
       },
-      scale: 5,
-      stagger: 0.1,
+      scale: 1.5,
+      stagger: 0.5,
     });
     /* tl.to("#cntImgProjects", {
       scrollTrigger: {
@@ -124,7 +124,9 @@ export default function Projects() {
               <div
               id="cntImgProjects"
                 className="           
-                 my-10
+                 my-20
+                 w-screen
+                 h-70
                   mx-auto
                   bg-slate-100
                   clip-circle-full
@@ -136,7 +138,7 @@ export default function Projects() {
                 <img
                   id="imgProjects"
                   className="
-              w-[700px]
+              w-[1200px]
              "
                   src={e.img}
                   alt=""
