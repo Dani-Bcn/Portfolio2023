@@ -53,7 +53,7 @@ export default function Projects() {
         trigger: "#imgProjects",
         start: "center 400",
         end: 3000,
-        scrub: 4,
+        scrub: 6,
       },
       scale: 1.5,
       stagger: 1,
