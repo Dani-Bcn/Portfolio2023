@@ -41,7 +41,7 @@ export default function Projects() {
     gsap.set("#imgProjects", {
       backgroundSize: "100% 100%",
       backgroundPositionX: "0px",
-      scale: 5,
+      scale: 10,
     });
 
   /*   gsap.set("#cntImgProjects", {
@@ -58,16 +58,6 @@ export default function Projects() {
       scale: 1.5,
       stagger: 0.5,
     });
-    /* tl.to("#cntImgProjects", {
-      scrollTrigger: {
-        trigger: "#imgProjects",
-        start: "center 900",
-        end: 4000,
-        scrub: 1,
-      },
-      stagger: 0.5,
-      scale: 1,
-    }); */
   }, []);
   console.log(images[0]);
 
@@ -75,11 +65,12 @@ export default function Projects() {
     <main
       id="projects"
       className="
-            w-screen
+            w-1/2
             flex
             flex-col
             justify-start
             items-center
+            m-auto
             z-10
         "
     >
@@ -125,8 +116,10 @@ export default function Projects() {
               id="cntImgProjects"
                 className="           
                  my-20
-                 w-screen
+                
+                 w-[450px]
                  h-70
+                 
                   mx-auto
                   bg-slate-100
                   clip-circle-full
