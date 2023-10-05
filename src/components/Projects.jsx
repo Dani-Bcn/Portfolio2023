@@ -51,12 +51,12 @@ export default function Projects() {
     tl.to("#imgProjects", {
       scrollTrigger: {
         trigger: "#imgProjects",
-        start: "center 900",
-        end: 3500,
-        scrub: 1,
+        start: "center 400",
+        end: 3000,
+        scrub: 4,
       },
       scale: 1.5,
-      stagger: 0.5,
+      stagger: 1,
     });
   }, []);
   console.log(images[0]);
