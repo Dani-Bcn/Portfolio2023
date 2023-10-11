@@ -1,104 +1,84 @@
-import React, { useEffect } from "react";
+import { useEffect, useState } from "react";
+
 import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import images from "./Images";
 
-export default function Title() {
-  gsap.registerPlugin(ScrollTrigger);
-
-
-
-useEffect(()=>{     
-   
-   gsap.to("#title1", {
-      scrollTrigger: {
-        trigger: "#title1",
-        start: "bottom center",
-        end: 1500,
-        scrub: 2,
-      },
-      x: -1000,
-      opacity:0
+function Title() {
+  const tl = gsap.timeline();
+  useEffect(() => {
+    tl.to("#title", {
+      display: "flex",
+      scale: 0.23,
+      stagger: 0.3,
+      delay:1,
+    });
+    tl.to("#title", {
+      x: 140,
+      scale: 0.23,
     });
 
-    gsap.to("#title2", {
-        scrollTrigger: {
-          trigger: "#title1",
-          start: "bottom center",
-          end: 1500,
-          scrub: 2,
-        },
-        x: 1000,
-        opacity:0,
-      
-      })
-      gsap.to("#circle", {
-        scrollTrigger: {
-          trigger: "#title1",
-          start: "bottom center",
-          end: 5000,
-          scrub: 2,
-        },
-        scale:30,
-        y:2500,
-        backgroundColor: "rgb(100 6 8)",
-      });
-  })
+    tl.to("#title-full", {
+      opacity: 1,
+      stagger: 0.1,
+      delay:-0.5
+    });
+  });
 
   return (
     <main
-      className="
-            w-full
-            h-screen
-            bg-slate-700
-            flex
-            justify-center
-            items-center
-        "
+      className="      
+    w-screen
+        h-screen
+        flex
+        flex-col
+        items-center
+        justify-center
+        bg-slate-700   
+        overflow-hidden
+      "
     >
-      <div
-      id="circle"
-        className="
-            h-96
-            w-96
-            md:w-80
-            md:h-80
-            bg-indigo-400
-            rounded-[500px]
-            cursor-pointer
-            z-1
-        "
-      ></div>
-      <div
-        className="
-            absolute           
-        "
-      >
-        <h1
-          id="title1"
+      {images[1].map((e, i) => (
+        <img
+          id="title"
+          key={i}
           className="
-        font-Play
-        text-orange-200
-        text-8xl
-        md:text-9xl
-        opacity-1
-        "
-        >
-          Dani
-        </h1>
-        <h1
-          id="title2"
-          className="
-            ml-12 
-            font-Play
-            text-orange-200
-            opacity-1
-            md:text-9xl
-            text-8xl
+            absolute
+            h-[550px]
+            bg-slate-700
+            hidden
+           
             "
-        >
-          Pérez
-        </h1>
+          src={e}
+        ></img>
+      ))}
+      <div
+        className="
+        flex
+        -ml-20
+      "
+      >
+        {images[2].map(
+          (e, i) => (
+          
+            (
+              <img
+                id="title-full"
+                key={i}
+                className="
+         flex
+            h-[125px]
+            
+            bg-slate-700
+          opacity-0
+            "
+                src={e}
+              ></img>
+            )
+          )
+        )}
       </div>
     </main>
   );
 }
+
+export default Title;

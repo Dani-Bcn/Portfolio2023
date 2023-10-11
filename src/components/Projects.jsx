@@ -7,16 +7,16 @@ export default function Projects() {
   const imagesPojects = [
     {
       link: "https://pokeahorcado.netlify.app/",
-      img: images[0],
+      img: images[0][0],
       title: "Poke ahorcado",
     },
     {
       link: "https://apiappmovies.netlify.app/",
-      img: images[1],
+      img: images[0][1],
       title: "App movies",
     },
     {
-      img: images[2],
+      img: images[0][2],
       title: "Homeworks for kids",
     },
   ];
@@ -59,7 +59,7 @@ export default function Projects() {
       stagger: 1,
     });
   }, []);
-  console.log(images[0]);
+ 
 
   return (
     <main

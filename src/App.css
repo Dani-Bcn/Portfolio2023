@@ -3,18 +3,22 @@
 @tailwind utilities;
 
 @layer utilities {
-  .clip-circle-none { 
-      clip-path: circle(0% at 50% 50%); 
+
+  .rotate-180{
+    transform:rotateY(90deg) ;
   }
-  .clip-circle-full { 
-      clip-path: circle(49% at 50% 50%); 
+    .clip-circle-none { 
+        clip-path: circle(0% at 50% 50%); 
+    }
+    .clip-circle-full { 
+        clip-path: circle(49% at 50% 50%); 
+    }
+    .clip-circle-photo { 
+      clip-path: circle(2% at 2% 75%); 
   }
-  .clip-circle-photo { 
-    clip-path: circle(2% at 2% 75%); 
-}
-.clip-circle-photo2 { 
-  clip-path: circle(20% at 50% 50%); 
-}
+  .clip-circle-photo2 { 
+    clip-path: circle(20% at 50% 50%); 
+  }
 }
 *{
   margin: 0;
@@ -59,4 +63,5 @@ li{
 #buttonLinks:active {
   transform: scale(0.9);
 }
+
 

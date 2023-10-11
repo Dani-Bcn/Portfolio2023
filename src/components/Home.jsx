@@ -5,11 +5,19 @@ import About from "./About";
 import Skills from "./Skills";
 import Projects from "./Projects";
 import Contact from "./Contact";
+import{motion as m} from "framer-motion"
 
 export default function Home() {
   return (
-    <main
-      id="home"
+    <m.main
+      
+    id="home"
+    animate={{
+        opacity:[0,1],
+        transition:{
+          duration:1
+        }
+    }}
       className="
         overflow-hidden
         w-screen
@@ -26,6 +34,6 @@ export default function Home() {
       <Skills />
       <Projects/>
       <Contact/> 
-    </main>
+    </m.main>
   );
 }
