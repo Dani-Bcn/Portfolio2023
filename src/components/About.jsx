@@ -89,11 +89,12 @@ let tl = gsap.timeline()
       flex
       flex-col
       items-center
-      justify-around
+      justify-center
       md:justify-start
       z-10
       "
     >
+     
       <span
         className="
           w-screen
