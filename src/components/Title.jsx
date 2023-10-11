@@ -1,11 +1,63 @@
 import { useEffect} from "react";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 import gsap from "gsap";
 import images from "./Images";
 
 function Title() {
   const tl = gsap.timeline();
+
+  gsap.registerPlugin(ScrollTrigger)
+
+
   useEffect(() => {
+
+   gsap.to("#circle",{
+
+      scrollTrigger:{
+       
+        start:"center top",
+        end:5000,
+        scrub:1,
+      },   
+     
+    scale:50,
+    backgroundColor:"rgb(100,15,15)"
+  })  
+  gsap.to("#title",{
+
+    scrollTrigger:{
+     
+      start:"center top",
+      end:5000,
+      scrub:1,
+    },     
+  backgroundColor:"rgb(100,15,15)"
+})  
+gsap.to("#title-full",{
+
+  scrollTrigger:{
+   
+    start:"center top",
+    end:5000,
+    scrub:1,
+  },   
+backgroundColor:"rgb(100,15,15)"
+})  
+gsap.to("#name2",{
+
+  scrollTrigger:{
+   
+    start:"center top",
+    end:5000,
+    scrub:1,
+  },   
+backgroundColor:"rgb(100,15,15)"
+})  
+
+  
+
+
     tl.to("#title", {
       display: "flex",
       scale: 0.3,
@@ -44,6 +96,7 @@ function Title() {
       "
     >
       <div
+      id="circle"
         className="
         absolute
         w-screen
@@ -78,6 +131,7 @@ function Title() {
         "
       >
         <div
+       
           className="
         flex
         ml-[75px]

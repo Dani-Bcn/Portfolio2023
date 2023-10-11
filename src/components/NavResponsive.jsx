@@ -5,8 +5,19 @@ import { Link } from "react-scroll";
 export default function NavResponsive() {
   const [menuActive, setMenuActive] = useState(false);
   useEffect(() => {
-    menuActive
-      ? gsap.to("#menu", {
+
+    gsap.to("#button-menu",{
+      y:200,
+      delay:2.8,
+      ease: "back.out(1.7)",     
+    })
+    gsap.to("#button-contact",{
+      y:200,
+      delay:2.7,
+      ease: "back.out(1.7)", 
+    })
+    menuActive?
+       gsap.to("#menu", {
           opacity:1,
           marginTop: 0,
           ease: "expo.out",
@@ -47,9 +58,11 @@ export default function NavResponsive() {
         "
       >
         <div
+        id="button-contact"
           className="         
             w-20
             h-10
+            -mt-96
             mx-5
             flex
             items-center
@@ -71,10 +84,12 @@ export default function NavResponsive() {
           </Link>
         </div>
         <div
+        id="button-menu"
           onClick={() => setMenuActive(!menuActive)}
           className="
             w-20
             h-10
+            -mt-96
             mx-5
             flex
             items-center
