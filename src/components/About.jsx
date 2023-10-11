@@ -76,6 +76,7 @@ let tl = gsap.timeline()
 
    },[])
 
+  
   return (
     <main
       id="about"
@@ -151,8 +152,9 @@ let tl = gsap.timeline()
           
           </article>
       </span>
+      
       <img
-        src={images[3]}
+        src={images[0][3]}
         alt="photo"
         id="photo"
         width={600}
