@@ -19,8 +19,6 @@ export default function About() {
    useEffect(()=>{
 
 let tl = gsap.timeline()
-
-
       gsap.set("#lettersAbout",{
         scale:0
       })
@@ -34,8 +32,8 @@ let tl = gsap.timeline()
 
           scrollTrigger:{
             trigger:"#lettersAbout",
-            start:"center 600",
-            end:400,
+            start:"center center",
+            end:300,
             scrub:1,
           },
           opacity:1,
@@ -116,6 +114,7 @@ let tl = gsap.timeline()
         key={i} 
         id="lettersAbout"      
           className="
+          mt-20
           opacity-0
           text-5xl
           text-orange-200
